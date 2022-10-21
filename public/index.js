@@ -43,7 +43,7 @@ const messageContainer = document.getElementById("messageContainer");
 socketClient.on("historico",(data)=>{
     let elementos="";
     data.forEach(item=>{
-        elementos = elementos + `<p><strong style="color: blue">${item.username}</strong> <spam style ="color: brown">[${item.date}] </spam>: <spam style="color: green">${item.message}</spam></p>`;
+        elementos = elementos + `<p><strong style="color: blue">${item.username}</strong> <spam style ="color: brown">[${item.date}] </spam>: <i style="color: green">${item.message}</i></p>`;
     });
     messageContainer.innerHTML = elementos;
 })
